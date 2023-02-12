@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Web Technology lab - 1</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      background-color: rgb(248, 237, 237);
+    }
+
+    #about-section {
+      background: url(content/background.jpg) center center/cover no-repeat;
+      width: 100%;
+      height: 2000px;
+/*       border: 2px solid black; */
+    }
+
+    #profile-img {
+      display: flex;
+/*       border: 2px solid red; */
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 10%;
+    }
+    #profile-pic{
+/*       border: 2px solid white; */
+      width: 10%;
+      height: 50%;
+      border-radius: 400px;
+      background-color: rgb(246, 145, 109);
+      
+    }
+    #profile-pic img{
+      border-radius: 400px;
+      width: 100%;
+      height: 100%;
+    }
+    #books {
+/*       border: 2px solid red; */
+      width: 100%;
+      height: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+    #books h2{
+      text-align: center;
+      padding: 1em 0px;
+      color: aliceblue;
+      background-color: rgb(118, 207, 243);
+    }
+    .book-cat {
+      width: 100%;
+      height: 20%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10px;
+      margin: 0px 20px;
+              /* border: 2px solid white; */
+    }
+
+    .inner-box {
+      border: 2px solid white;
+      height: 100%;
+      width: 300px;
+      border-radius: 10px;
+      margin: 0px 20px;
+    }
+    .inner-box img{
+      width: 100%;
+      height: 100%;
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <ul class="nav-list">
+      <li> <a href="/main.html">Home</a></li>
+      <li> <a href="/profile.html">About Us</a></li>
+      <li> <a href="/orders.html">Your Orders</a></li>
+      <li> <a href="/payment.html">Payment</a></li>
+
+    </ul>
+    <div class="rightnav">
+      <button id="login-btn"><a href="/login.html">Login/Register</a></button>
+    </div>
+  </nav>
+  <section id="about-section">
+    <div id="profile-img">
+      <div id="profile-pic">
+        <img src="/content/profile-pic.avif" alt="">
+      </div>
+    </div>
+    <div id="books">
+      <h2>Horror Story</h2>
+      <div id="horror" class="book-cat">
+        <div class="horror-box inner-box" id="h-1">
+          <img src="/content/horror/h-1.avif" alt="">
+        </div>
+        <div class="horror-box inner-box" id="h-2">
+          <img src="/content/horror/h-2.avif" alt="">
+        </div>
+        <div class="horror-box inner-box" id="h-3">
+          <img src="/content/horror/h-3.avif" alt="">
+        </div>
+      </div>
+      <h2>Romance</h2>
+      <div id="Romance" class="book-cat">
+        <div class="Romance-box inner-box" id="r-1">
+          <img src="/content/romance/r-1.avif" alt="">
+        </div>
+        <div class="Romance-box inner-box" id="r-2">
+          <img src="/content/romance/r-2.avif" alt="">
+        </div>
+        <div class="Romance-box inner-box" id="r-3">
+          <img src="/content/romance/r-3.avif" alt="">
+        </div>
+      </div>
+      <h2>Sci-fi</h2>
+      <div id="Sci-fi" class="book-cat">
+        <div class="Sci-fi-box inner-box" id="s-1">
+          <img src="/content/sci-fi/s-1.avif" alt="">
+        </div>
+        <div class="Sci-fi-box inner-box" id="s-2">
+          <img src="/content/sci-fi/s-2.avif" alt="">
+        </div>
+        <div class="Sci-fi-box inner-box" id="s-3">
+          <img src="/content/sci-fi/s-3.avif" alt="">
+        </div>
+      </div>
+      <h2>Adventure</h2>
+      <div id="Adventure" class="book-cat">
+        <div class="Adv-box inner-box" id="a-1">
+          <img src="/content/adventure/a-1.avif" alt="">
+        </div>
+        <div class="Adv-box inner-box" id="a-2">
+          <img src="/content/adventure/a-2.avif" alt="">
+        </div>
+        <div class="Adv-box inner-box" id="a-3">
+          <img src="/content/adventure/a-3.avif" alt="">
+        </div>
+      </div>
+      <h2>Comics</h2>
+      <div id="Comics" class="book-cat">
+        <div class="comic-box inner-box" id="c-1">
+          <img src="/content/comics/c-1.avif" alt="">
+        </div>
+        <div class="comic-box inner-box" id="c-1">
+          <img src="/content/comics/c-2.avif" alt="">
+        </div>
+        <div class="comic-box inner-box" id="c-1">
+          <img src="/content/comics/c-3.avif" alt="">
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  <script src="/script.js"></script>
+</body>
+
+</html>

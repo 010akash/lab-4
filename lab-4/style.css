@@ -1,0 +1,180 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-color: rgb(242, 244, 246);
+}
+.navbar {
+    display: flex;background: #00F260;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0575E6, #00F260);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0575E6, #00F260); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: sticky;
+
+}
+
+.nav-list {
+    color: rgb(245, 241, 241);
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.nav-list img {
+    border-radius: 62px;
+    width: 80px;
+    height: 80px;
+}
+
+.nav-list li {
+    list-style: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 1px 22px;
+    margin: 10px;
+
+}
+.nav-list li a{
+    text-decoration: none;
+    color:rgb(248, 243, 243)
+}
+/* .nav-list li a:hover{
+    color: rgb(250, 250, 250);
+} */
+.nav-list li:hover {
+  border: 1px solid yellow;
+  border-radius: 12px;
+}
+#login-btn{
+    margin: 14px 30px;
+    padding: 4px 21px;background: none;
+    border-radius: 15px;border: none;
+}
+#login-btn:hover{
+    border: 1px solid yellow;
+  }
+#login-btn a{
+    font-size: 17px;
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(249, 248, 248);
+}
+
+
+#home-section{
+    width: 100%;
+    height: 700px;
+    background: url(content/background.jpg) center center/cover no-repeat;
+}
+#home-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+  color: #0a0a0a;
+}
+#home-content h1{
+  margin-top: 80px;
+}
+#home-content h3{
+  margin: 20px 0px;
+}
+#home-btn{
+  margin-top: 50px;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 18px;
+  background:none;
+  color:rgb(245, 241, 241);
+  font-weight: bold;
+
+  border: 2px solid rgb(245, 242, 242);
+  
+}
+#home-btn:hover{
+  cursor: pointer;
+  background-color:rgb(67, 160, 240);
+  border: 1px solid white;
+}
+#diff-gen{
+  display: flex;
+  width: 80%;
+  height: 30%;
+}
+.gen-collection{
+  width: 20%;
+  height: 100%;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 5px;
+  border-radius: 10px;
+}
+#gen-1{
+  background: url(/content/comic-main.avif) no-repeat center center/cover;
+}
+#gen-2{
+    background: url(/content/romantic.avif) no-repeat center center/cover;
+}
+#gen-3{
+    background: url(/content/adventure-main.avif) no-repeat center center/cover;
+}
+#gen-4{
+    background: url(/content/sci-fi-main.jpg) no-repeat center center/cover;
+}
+#gen-5{
+    background: url(/content/horror-main.jpg) no-repeat center center/cover;
+}
+.popup-box{
+	display: none;
+	position: fixed;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	top: 0;
+	left: 0;
+}
+
+.popup-inner{
+	max-width: 300px;
+	min-height: 160px;
+	background: white;
+  border-radius: 25px;
+	padding: 15px;
+	margin: auto;
+	top: 25%;
+	position: relative;
+}
+
+
+
+.popup-msg{
+	font-weight: bold;
+	color: black;
+	padding: 20px 20px 0 20px;
+}
+
+.next-step-btn{
+	margin:20px auto 0;
+background: linear-gradient(rgb(204,0,0), rgb(130,0,0));
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#015eab', endColorstr='#10276b');
+	border: none !important;
+	padding: 10px 40px !important;
+	color: #fff !important;
+	font-weight: bold;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.transparent-layer{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: #000000;
+	opacity: 0.3;
+overflow: hidden;
+
+}

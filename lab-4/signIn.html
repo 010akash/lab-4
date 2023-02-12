@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>logIn form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        
+
+        body {
+
+            width: 100vw;
+            height: 100vh;
+            background: url(content/background.jpg) center center/cover no-repeat;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .inner-box {
+            display: flex;
+            width: 70%;
+            height: 70%;
+
+        }
+
+        .left-box {
+            border: 2px solid #e3f309;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 60%;
+            height: 100%;
+            color: aliceblue;
+            border-bottom-left-radius: 1em;
+            border-top-left-radius: 1em;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(62, 228, 170, 0.9864320728291317) 0%, rgba(42, 223, 198, 1) 33%, rgba(34, 221, 208, 1) 49%, rgba(0, 212, 255, 1) 100%);
+        }
+
+
+        #left-top-box {
+            text-align: center;
+            height: 40%;
+            width: 100%;
+        }
+
+        #left-top-box h1 {
+            margin-top: .5em;
+        }
+
+        #left-top-box-inner {
+            text-align: center;
+
+        }
+
+        #left-top-box-inner img {
+            width: 1.5em;
+            margin: 1em;
+
+        }
+
+        #left-bottom-box {
+            display: flex;
+            border-radius: 1em;
+            padding-right: 2em;
+            
+            justify-content: center;
+            align-items: center;
+            height: 30%;
+            width: 70%;
+        }
+
+        .inner-form {
+            text-align: center;
+            width: 60%;
+            height: 80%;
+        }
+
+        .input-box {
+            font-size: 1em;
+            border: .2em solid white;
+            border-radius: .5em;
+            padding: .2em 1em;
+        }
+
+        #input-btn {
+            font-size: 1em;
+            padding: .3em 2em;
+            cursor: pointer;
+            border-radius: 1em;
+            background: none;
+            color: rgb(250, 249, 246);
+            border: .1em solid white;
+        }
+
+        #input-btn:hover {
+            background-color: #07c4f8;
+        }
+
+        .inner-form a {
+            color: rgb(19, 107, 240);
+        }
+
+
+
+
+        .right-box {
+            border: 2px solid #e3f309;
+            color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 40%;
+            height: 100%;
+            background-color: #92ff8b;
+            border-top-right-radius: 1em;
+            border-bottom-right-radius: 1em;
+            background-image: linear-gradient(45deg, #92ff8b 0%, #2BD2FF 52%, #2BFF88 90%);
+
+        }
+
+        .right-box h1 {}
+
+        .right-box p {
+            margin: 1em 1em;
+            text-align: center;
+        }
+
+        .right-box h5 {
+            color: #2b87ff;
+
+        }
+
+        .right-box h3 {}
+
+        #right-btn {
+            margin: 1em 1em;
+            padding: .5em 2em;
+            border: .1em solid white;
+            background: none;
+            color: white;
+            border-radius: 1em;
+        }
+
+        #right-btn:hover {
+            cursor: pointer;
+            background-color: #07c4f8;
+        }
+
+        .right-box a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li> <a href="/main.html">Home</a></li>
+            <li> <a href="/profile.html">About Us</a></li>
+            <li> <a href="/orders.html">Your Orders</a></li>
+            <li> <a href="/payment.html">Payment</a></li>
+
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="inner-box">
+            <div class="left-box">
+                <div id="left-top-box">
+                    <h1>Sign In to Our Library</h1>
+                    <div id="left-top-box-inner">
+                        <a href="https://www.facebook.com/"><img src="content/facebook.png" alt=""></a>
+                        <a href="https://accounts.google.com/"><img src="content/google-symbol.png" alt=""></a>
+                        <a href="https://in.linkedin.com/"><img src="content/linkedin (1).png" alt=""></a>
+                    </div>
+                    <p>or use Email Account</p>
+                </div>
+                <div id="left-bottom-box">
+                    <div class="inner-form">
+                        <input type="email" name="full_name" id="email" class="input-box" placeholder="Email"
+                            required><br><br>
+                        <input type="password" name="passwd" id="passwd" class="input-box" placeholder="Password"
+                            required><br><br>
+                        <a href="">Forgot Your Password?</a><br><br>
+                        <input type="button" value="Sign In" id="input-btn">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="right-box">
+                <h1>Hello ,Friend!</h1>
+                <p>Enter Your Personal Details and start a great journey with us</p>
+                <h5>Don't have an Account</h5>
+                <h3>Create Your Account</h3>
+                <button id="right-btn"><a href="/signUp.html">Sign Up</a> </button>
+            </div>
+        </div>
+    </div>
+    <script src="/script.js"></script>
+</body>
+
+</html>

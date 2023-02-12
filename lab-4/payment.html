@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Details</title>
+<link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            font-size: inherit;
+        }
+
+
+        .container {
+            background: url(content/background.jpg) center center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #08AEEA;
+            background-image: linear-gradient(0deg, #08AEEA 29%, #2AF598 100%);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .inner-box-upper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 30em;
+            height: 5em;
+            margin: 1em 0px;
+            margin-top: 2em;
+            color: rgb(13, 13, 13);background-color: #FA8BFF;
+background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
+            border-top-right-radius: 5em;
+
+        }
+
+        .heading {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+            border: 1px solid rgb(11, 11, 11);
+            padding: 0px 1em;
+        }
+
+        #list {
+            display: flex;
+            justify-content: center;
+        }
+
+        .option ul {
+            color: rgb(14, 13, 13);
+            list-style: none;
+        }
+
+        .option a {
+            color: rgb(14, 13, 13);
+            text-decoration: none;
+            margin: 2em;
+            font-weight: bold;
+
+        }
+
+        .option a:hover {
+            text-decoration: underline;
+        }
+
+        .option a:active {
+            color: #2AF598;
+        }
+
+        .inner-box-bottom {
+            display: flex;
+            justify-content: center;
+            width: 30em;
+            height: 60%;
+            /* border: 2px solid rgb(15, 15, 15); */
+            color: rgb(12, 12, 12);
+            border-bottom-left-radius: 5em;
+            background-color: #FA8BFF;
+background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+
+        }
+
+        .inner-box-bottom h1 {
+            margin-top: 1em;
+            font-size: 2em;
+            text-align: center;
+        }
+
+        #fullName {
+            padding: .2em 1em;
+            padding-right: 6em;
+        }
+
+        #card-no {
+
+            padding: .2em 1em;
+            padding-right: 6em;
+        }
+
+        #cvv-no {
+            margin-left: 3em;
+        }
+
+        #passwd {
+            font-size: .9em;
+        }
+
+        #pay-btn a {
+            text-decoration: none;
+
+        }
+
+        #pay-btn {
+            padding: .2em 6em;
+            margin-left: .4em;
+            background-color: #0abaeb;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li> <a href="/main.html">Home</a></li>
+            <li> <a href="/profile.html">About Us</a></li>
+            <li> <a href="/orders.html">Your Orders</a></li>
+
+
+        </ul>
+        <div class="rightnav">
+            <button id="login-btn"><a href="/signIn.html">Login/Register</a></button>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="inner-box-upper">
+            <div class="heading">
+                <h1>Payment Option</h1>
+            </div>
+            <div class="option">
+                <ul id="list">
+                    <li><a href="/payment.html">Credit Card</a></li>
+                    <li><a href="/DebitCard.html">Debit Card</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="inner-box-bottom">
+            <form action="#">
+                <h1>Credit Card Details</h1><br>
+                <label for="name">Card Holder Name</label><br>
+                <input type="text" placeholder="Akash Thakur" name="name" id="fullName" required><br><br>
+                <label for="card-number">Card Number</label><br>
+                <input type="text" name="card-no" id="card-no" placeholder="1234 5678 3456"><br><br>
+                <label for="exp-date">Expiry Date</label>
+                <label for="cvv" id="cvv-no">CVV</label><br>
+                <input type="date" name="ex-date" id="expiry-date" required>&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="password" name="password" id="passwd" aria-required="true" placeholder="***"><br><br><br>
+                <button id="pay-btn"><a href="#">Make Payment</a></button>
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

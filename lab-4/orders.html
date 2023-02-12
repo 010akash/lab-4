@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Web Technology lab - 1</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: rgb(248, 237, 237);
+        }
+      .Order-section{
+/*         border: 2px solid red; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 700px;
+        background: url(content/background.jpg) center center/cover no-repeat;
+      }
+      #current-order{
+        display: flex;
+        flex-direction: column;
+/*         border: 2px solid white; */
+        width: 80%;
+        height: 60%;
+        align-items: center;
+      }
+       #current-order h2{
+         margin: 20px 0px;
+       }
+      #order-btn{
+        font-size: 18px;
+        margin: 30px 0px;
+        padding: 5px 25px;
+        border-radius: 20px;
+      }
+      #order-btn:hover{
+        cursor: pointer;
+      }
+      a{
+        text-decoration: none;
+      }
+      #book-order{
+        display: flex;
+/*         border: 2px solid black; */
+        width: 100%;
+        height: 50%;
+      }
+      .curr-order{
+        /* border: 2px solid red; */
+        border-radius: 10px;
+        margin: 0px 5px;
+        height: 100%;
+        width: 33%;
+      }
+      
+      #prev-order{
+        display: flex;
+/*         border: 2px solid black; */
+         width: 100%;
+        height: 30%;
+      }
+      .previous-order{
+        /* border: 2px solid red; */
+        border-radius: 10px;
+        margin: 0px 5px;
+        height: 100%;
+        width: 20%;
+      }
+    #co-1{
+      background: url(/content/comics/c-2.avif) no-repeat center center/cover;
+    }
+    #co-2{
+      background: url(/content/horror/h-2.avif) no-repeat center center/cover;
+    }
+    #co-3{
+      background: url(/content//adventure/a-3.avif) no-repeat center center/cover;
+    }
+    #po-1{
+      background: url(/content/comics/c-2.avif) no-repeat center center/cover;
+    }
+    #po-2{
+      background: url(/content/romance/r-2.avif) no-repeat center center/cover;
+    }
+    #po-3{
+      background: url(/content/romantic.avif) no-repeat center center/cover;
+    }
+    #po-4{
+      background: url(/content//horror-main.jpg) no-repeat center center/cover;
+    }
+    #po-5{
+      background: url(/content/romance/r-3.avif) no-repeat center center/cover;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li> <a href="/main.html">Home</a></li>
+            <li> <a href="/main.html">About Us</a></li>
+            <li> <a href="/orders.html">Your Orders</a></li>
+            <li> <a href="/payment.html">Payment</a></li>
+            
+        </ul>
+        <div class="rightnav">
+            <button id="login-btn"><a href="/signIn.html">Login/Register</a></button>
+        </div>
+    </nav>
+  <section class="Order-section">
+    <div id="current-order">
+      <h2>Place Your Order</h2>
+      <div id="book-order">
+        <div class="curr-order" id="co-1"></div>
+        <div class="curr-order" id="co-2"></div>
+        <div class="curr-order" id="co-3"></div>
+      </div>
+      <button id="order-btn"> <a href="/payment.html">Make Payment</a></button>
+    </div>
+    <h2>Your Previous Orders</h2>
+    <div id="prev-order">
+      <div class="previous-order" id="po-1"></div>
+      <div class="previous-order" id="po-2"></div>
+      <div class="previous-order" id="po-3"></div>
+      <div class="previous-order" id="po-4"></div>
+      <div class="previous-order" id="po-5"></div>
+    </div>
+  </section>
+  <script src="/script.js"></script>
+</body>
+</html>
