@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +40,6 @@
 
         .left-box {
             border: 2px solid #e3f309;
-
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -56,12 +56,8 @@
 
         #left-top-box {
             text-align: center;
-            height: 40%;
+            height: 30%;
             width: 100%;
-        }
-
-        #left-top-box h1 {
-            margin-top: .5em;
         }
 
         #left-top-box-inner {
@@ -79,10 +75,9 @@
             display: flex;
             border-radius: 1em;
             padding-right: 2em;
-            
             justify-content: center;
             align-items: center;
-            height: 30%;
+            height: 60%;
             width: 70%;
         }
 
@@ -97,9 +92,11 @@
             border: .2em solid white;
             border-radius: .5em;
             padding: .2em 1em;
+            
         }
 
         #input-btn {
+            
             font-size: 1em;
             padding: .3em 2em;
             cursor: pointer;
@@ -114,7 +111,9 @@
         }
 
         .inner-form a {
-            color: rgb(19, 107, 240);
+            font-size: .7em;
+            text-align: center;
+            color: rgb(240, 243, 248);
         }
 
 
@@ -169,6 +168,9 @@
             font-size: 1.2em;
             color: white;
         }
+
+
+
     </style>
 </head>
 
@@ -196,12 +198,12 @@
                 </div>
                 <div id="left-bottom-box">
                     <div class="inner-form">
-                        <input type="email" name="full_name" id="email" class="input-box" placeholder="Email"
+                        <input type="email" name="email" id="email" class="input-box" placeholder="Email"
                             required><br><br>
                         <input type="password" name="passwd" id="passwd" class="input-box" placeholder="Password"
                             required><br><br>
                         <a href="">Forgot Your Password?</a><br><br>
-                        <input type="button" value="Sign In" id="input-btn">
+                        <input type="Submit" value="Sign In" id="input-btn" onclick="loginPopup()">
 
                     </div>
 
@@ -217,6 +219,8 @@
         </div>
     </div>
     <script src="/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
 </body>
 
 </html>

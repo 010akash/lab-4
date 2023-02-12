@@ -24,6 +24,7 @@
             background-image: linear-gradient(0deg, #08AEEA 29%, #2AF598 100%);
             width: 100vw;
             height: 100vh;
+            
         }
 
         .inner-box-upper {
@@ -35,7 +36,7 @@
             height: 5em;
             margin: 1em 0px;
             margin-top: 2em;
-            color: rgb(13, 13, 13);background-color: #FA8BFF;
+            color: rgb(250, 248, 248);background-color: #FA8BFF;
 background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
 
             border-top-right-radius: 5em;
@@ -45,7 +46,7 @@ background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
         .heading {
             font-size: 1.5em;
             margin-bottom: 1em;
-            border: 1px solid rgb(11, 11, 11);
+            border: 1px solid rgb(246, 249, 249);
             padding: 0px 1em;
         }
 
@@ -55,12 +56,12 @@ background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
         }
 
         .option ul {
-            color: rgb(14, 13, 13);
+            color: rgb(249, 251, 252);
             list-style: none;
         }
 
         .option a {
-            color: rgb(14, 13, 13);
+            color: rgb(248, 250, 250);
             text-decoration: none;
             margin: 2em;
             font-weight: bold;
@@ -81,7 +82,7 @@ background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
             width: 30em;
             height: 60%;
             /* border: 2px solid rgb(15, 15, 15); */
-            color: rgb(12, 12, 12);
+            color: rgb(253, 252, 252);
             border-bottom-left-radius: 5em;
             background-color: #FA8BFF;
 background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
@@ -89,7 +90,7 @@ background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
         }
 
         .inner-box-bottom h1 {
-            margin-top: 1em;
+           
             font-size: 2em;
             text-align: center;
         }
@@ -123,6 +124,84 @@ background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
             margin-left: .4em;
             background-color: #0abaeb;
         }
+
+
+
+
+       
+
+       
+        label {
+            font-size: 1em;
+            color: aliceblue;
+        }
+
+        .field-container {
+            padding: 1px 1px;
+        }
+
+        .required {
+            color: red;
+            font-size: 1.1em;
+        }
+
+        .field-container>input,
+        .passkey-box>input {
+            width: 100%;
+            display: inline-block;
+            padding: 7px 4px;
+            font-size: 1em;
+            margin: 5px 0 3px;
+            border-radius: 3px;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid black;
+        }
+
+        .passkey-box {
+            position: relative;
+        }
+
+        .passkey-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            font-size: 1.2em;
+        }
+
+        .field-container>input:focus,
+        .passkey-box>input:focus {
+            border-bottom: 2px solid dodgerBlue;
+        }
+
+        .error-messg {
+            display: block;
+            color: red;
+            font-weight: 300;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        input[type='submit'] {
+            padding: 10px 30px;
+            font-size: 1em;
+            background:none;
+            border: 1px solid white;
+            outline: none;
+            color: white;
+            border-radius: 3em;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input:hover{
+            background-color: rgb(7, 243, 223);
+        }
+
+
     </style>
 </head>
 
@@ -152,17 +231,22 @@ background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
             </div>
         </div>
         <div class="inner-box-bottom">
-            <form action="#">
+            <form name="form" action="#">
                 <h1>Credit Card Details</h1><br>
-                <label for="name">Card Holder Name</label><br>
-                <input type="text" placeholder="Akash Thakur" name="name" id="fullName" required><br><br>
+                <div class="field-container">
+                    <label for="full-name">Full Name: <span class="required">*</span></label>
+                    <input type="text" name="full-name" pattern="^([a-zA-Z]{2,} ?)+$" id="full-name"
+                        placeholder="Your full name" required="required" />
+                    <span class="error-messg"></span>
+                </div>
                 <label for="card-number">Card Number</label><br>
-                <input type="text" name="card-no" id="card-no" placeholder="1234 5678 3456"><br><br>
+                <input type="text" name="creditCradNum" id="card-no" placeholder="1234 5678 3456"><br><br>
                 <label for="exp-date">Expiry Date</label>
                 <label for="cvv" id="cvv-no">CVV</label><br>
                 <input type="date" name="ex-date" id="expiry-date" required>&nbsp;&nbsp;&nbsp;&nbsp;
                 <input type="password" name="password" id="passwd" aria-required="true" placeholder="***"><br><br><br>
-                <button id="pay-btn"><a href="#">Make Payment</a></button>
+                <input type="submit" name="submit" value="Submit" onclick="creditCardValidation(document.form.creditCradNum)"/>
+                
 
             </form>
         </div>

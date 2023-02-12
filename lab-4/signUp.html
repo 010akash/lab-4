@@ -19,143 +19,158 @@
             background: url(content/background.jpg) center center/cover no-repeat;
         }
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-        }
-
-        .inner-box {
-            display: flex;
+        .wrapper {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
             width: 70%;
-            height: 70%;
-
+            height: 80%;
+            margin: 0 auto;
+            background: #2fb7f7;
+            padding: 20px 30px;
+            border-radius: 8px;
         }
 
-        .left-box {
-            border: 2px solid #e3f309;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 40%;
-            height: 100%;
+        h1 {
+            text-align: center;
             color: aliceblue;
-            border-bottom-left-radius: 1em;
-            border-top-left-radius: 1em;
+        }
+
+        .form-container {
+            width: 100%;
+            margin: 10px auto;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            height: 90%;
             background: rgb(2, 0, 36);
             background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(62, 228, 170, 0.9864320728291317) 0%, rgba(42, 223, 198, 1) 33%, rgba(34, 221, 208, 1) 49%, rgba(0, 212, 255, 1) 100%);
+        
         }
 
-        .left-box p {
-            text-align: center;
-            padding: 0px 1em;
+        .flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
         }
 
-        .left-box h1 {
-            margin: .5em 0px;
+        .flex-item {
+            width: 40%;
+            height: 100%;
         }
 
-        #left-btn {
-            margin-top: 1em;
-            font-size: large;
-            padding: .2em 1.5em;
-            border-radius: 2em;
-            background: none;
-            /* background-color: rgb(16, 240, 191); */
-            border: 1px solid rgb(245, 252, 250);
-            cursor: pointer;
-            color: rgb(241, 241, 241);
-        }
-
-        #left-btn:hover {
-            background-color: #07c4f8;
-        }
-
-        .left-box a {
-            text-decoration: none;
-            color: white;
-        }
-
-
-
-
-        .right-box {
-            border: 2px solid #e3f309;
+        label {
+            display: block;
+            font-size: 20px;
             color: aliceblue;
+        }
+
+        .field-container {
+            padding: 1px 1px;
+            margin: 10px 0 10px;
+        }
+
+        .required {
+            color: red;
+            font-size: 1.1em;
+        }
+
+        .field-container>input,
+        .passkey-box>input {
+            width: 100%;
+            display: inline-block;
+            padding: 7px 15px;
+            font-size: 18px;
+            margin: 5px 0 3px;
+            border-radius: 3px;
+            outline: none;
+            border: none;
+            border-bottom: 2px solid black;
+        }
+
+        .passkey-box {
+            position: relative;
+        }
+
+        .passkey-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            font-size: 1.2em;
+        }
+
+        .field-container>input:focus,
+        .passkey-box>input:focus {
+            border-bottom: 2px solid dodgerBlue;
+        }
+
+        .error-messg {
+            display: block;
+            color: red;
+            font-weight: 300;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        input[type='submit'] {
+            padding: 10px 30px;
+            font-size: 1em;
+            background:none;
+            border: 1px solid white;
+            outline: none;
+            color: white;
+            border-radius: 3em;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input:hover{
+            background-color: rgb(7, 243, 223);
+        }
+
+
+        #bottom-box {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            width: 60%;
-            height: 100%;
-            background-color: #92ff8b;
-            border-top-right-radius: 1em;
-            border-bottom-right-radius: 1em;
-            background-image: linear-gradient(45deg, #92ff8b 0%, #2BD2FF 52%, #2BFF88 90%);
-
-        }
-
-        #right-top-box {
-            text-align: center;
-            height: 30%;
+            height: 20%;
             width: 100%;
+            display: flex;
+            border-radius: 1em;
+            justify-content: center;
+            align-items: center;
+            
         }
 
-        #right-top-box h1 {
+        #bottom-box h4 {
             margin-top: .5em;
         }
 
-        #right-top-box-inner {
+        #bottom-box-inner {
             text-align: center;
 
         }
+        #log-btn{
+            color: aliceblue;
+        }
 
-        #right-top-box-inner img {
+        #bottom-box-inner img {
             width: 1.5em;
             margin: 1em;
 
         }
 
-        #right-bottom-box {
-            display: flex;
-            justify-content: center;
-            border-radius: 1em;
-
-            align-items: center;
-            padding-right: 2em;
-            height: 45%;
-            width: 70%;
-        }
-
-        .inner-form {
-            text-align: center;
-            width: 60%;
-            height: 80%;
-        }
-
-        .input-box {
-            font-size: 1em;
-            border: .2em solid white;
-            border-radius: .5em;
-            padding: .2em 1em;
-        }
-
-        #input-btn {
-            text-align: center;
-            font-size: 1em;
-            padding: .3em 2em;
-            cursor: pointer;
-            border-radius: 1em;
-            background: none;
-            color: rgb(250, 249, 246);
-            border: .1em solid white;
-        }
-
-        #input-btn:hover {
-            background-color: #89f0db;
-        }
     </style>
 </head>
 
@@ -169,43 +184,78 @@
 
         </ul>
     </nav>
-    <div class="container">
-        <div class="inner-box">
-            <div class="left-box">
-                <h1>Welcome Back</h1>
-                <p>Lorem ipsum dolor sitnobis consectetur deserunt cum inventore recusandae quas!</p>
-                <button id="left-btn"> <a href="/signIn.html">Sign In</a></button>
-            </div>
-            <div class="right-box">
-                <div id="right-top-box">
-                    <h1>Create Account</h1>
-                    <div id="right-top-box-inner">
-                        <a href="https://www.facebook.com/"><img src="content/facebook.png" alt=""></a>
-                        <a href="https://accounts.google.com/"><img src="content/google-symbol.png" alt=""></a>
-                        <a href="https://in.linkedin.com/"><img src="content/linkedin (1).png" alt=""></a>
-                    </div>
-                    <p>or use email for registration</p>
-                </div>
-                <div id="right-bottom-box">
-                    <div class="inner-form">
-                        <form id="signUp" class="form">
-                            <input type="text" name="full_name" id="name" class="input-box" placeholder="Your name"
-                                required><br><br>
-                            <input type="email" name="full_name" id="email" class="input-box" placeholder="Email"
-                                required><br><br>
-                            <input type="password" name="passwd" id="passwd" class="input-box" placeholder="Password"
-                                required><br><br>
-                            <input type="password" name="passwd" id="passwd" class="input-box"
-                                placeholder="Confirm Password" required><br><br>
-                            <input type="button" value="Sign Up" id="input-btn">
-                        </form>
-                    </div>
+<div class="container">
+    
+</div>
+    <div class="wrapper">
+        <h1>Register Here</h1>
+        <div class="form-container">
+            <form action="" method="post">
+                <div class="flex">
+                    <div class="flex-item">
+                        <div class="field-container">
+                            <label for="full-name">Full Name: <span class="required">*</span></label>
+                            <input type="text" name="full-name" pattern="^([a-zA-Z]{2,} ?)+$" id="full-name"
+                                placeholder="Your full name" required="required" />
+                            <span class="error-messg"></span>
+                        </div>
+                        <div class="field-container">
+                            <label for="email">Email: <span class="required">*</span></label>
+                            <input type="email" name="email" id="email" placeholder="Your email" required="required" />
+                            <span class="error-messg"></span>
+                        </div>
+                        <div class="field-container">
+                            <label for="confirm-email">Confirm email: <span class="required">*</span></label>
+                            <input type="email" name="confirm-email" id="confirm-email" placeholder="Re-enter email"
+                                required="required" />
+                            <span class="error-messg"></span>
+                        </div>
 
-                </div>
-            </div>
+                    </div>
+                    <div class="flex-item">
+                        <div class="field-container">
+                            <label for="contact-no">Contact no.: <span class="required">*</span></label>
+                            <input type="tel" name="contact-no" pattern=[0-9]{10} id="contact-no"
+                                placeholder="Mobile number" required="required" />
+                            <span class="error-messg"></span>
+                        </div>
+                        <div class="field-container">
+                            <label for="passkey">Password: <span class="required">*</span></label>
+                            <div class="passkey-box">
+                                <input type="password" name="passkey" id="passkey" class="passkey"
+                                    placeholder="Password" required="required" />
+                                <span class="passkey-icon" data-display-passkey="off"><i class="fas fa-eye"></i> </span>
+                            </div>
+                            <span class="error-messg"></span>
+                        </div>
+                        <div class="field-container">
+                            <label for="confirm-passkey">Confirm password: <span class="required">*</span></label>
+                            <div class="passkey-box">
+                                <input type="password" name="confirm-passkey" class="passkey" id="confirm-passkey"
+                                    placeholder="Re-enter password" required="required" />
+                                <span class="passkey-icon" data-display-passkey="off"><i class="fas fa-eye"></i></span>
+                            </div>
+                            <span class="error-messg"></span>
+                        </div>
 
+                    </div>
+                </div>
+                <div class="center"><input type="submit" value="Sign Up" id="signUp-btn" onclick="registerPopup()"></div>
+            </form>
+            <div id="bottom-box">
+                <h4>Already Have an Account <a href="/signIn.html" id="log-btn">Sign In</a> here</h4>
+                <div id="bottom-box-inner">
+                    <a href="https://www.facebook.com/"><img src="content/facebook.png" alt=""></a>
+                    <a href="https://accounts.google.com/"><img src="content/google-symbol.png" alt=""></a>
+                    <a href="https://in.linkedin.com/"><img src="content/linkedin (1).png" alt=""></a>
+                </div>
+
+            </div>
         </div>
+
     </div>
+
+
     <script src="/script.js"></script>
 </body>
 
